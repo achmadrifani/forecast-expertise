@@ -48,6 +48,18 @@ def save_data(df,lead,new_data):
 def change_data(df):
     st.session_state[f'df_lead_{lead}'] = df
 
+with st.sidebar:
+    st.markdown('''# Panduan Penggunaan''')
+    st.markdown('''1. Edit forecast dengan cara mengubah data di kolom "WX".
+  
+2. Kondisi Cuaca yang Tersedia:  
+cerah, cerah berawan, berawan, berawan tebal, hujan ringan, hujan sedang, hujan lebat, hujan petir.
+  
+3. Setelah selesai mengedit klik tombol 'Save Edit'.
+
+4. Lanjutkan mengedit dengan klik tombol 'Next' untuk mengedit data selanjutnya.''')
+    st.divider()
+    st.markdown('''_Created by: Achmad Rifani @ 2023_''')
 
 st.title("Forecast Data Editor")
 df = pd.read_csv("data/20240116.csv")
@@ -89,6 +101,8 @@ with col1:
     df_lead = get_leadtime(df, lead)
     df_lead["WXICON"] = df_lead["WX"].map(wx_icon_dict)
     button_container = st.container()
+
+
 
     st.write(f"### Valid time: {datetimes[int(st.session_state.slider/3)]} WITA")
 
