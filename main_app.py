@@ -50,14 +50,17 @@ def change_data(df):
 
 with st.sidebar:
     st.markdown('''# Panduan Penggunaan''')
-    st.markdown('''1. Edit forecast dengan cara mengubah data di kolom "WX".
+    st.markdown('''1. Edit _forecast_ dengan cara mengubah data di kolom "WX".
   
 2. Kondisi Cuaca yang Tersedia:  
 cerah, cerah berawan, berawan, berawan tebal, hujan ringan, hujan sedang, hujan lebat, hujan petir.
   
-3. Setelah selesai mengedit klik tombol 'Save Edit'.
+3. Setelah selesai mengedit klik tombol 'Save Edit'
 
-4. Lanjutkan mengedit dengan klik tombol 'Next' untuk mengedit data selanjutnya.''')
+4. **Lakukan save edit** sebelum berpindah ke _lead time_ berikutnya agar data tersimpan.
+
+5. Lanjutkan mengedit dengan klik tombol 'Next' untuk mengedit data selanjutnya.
+''')
     st.divider()
     st.markdown('''_Created by: Achmad Rifani @ 2023_''')
 
